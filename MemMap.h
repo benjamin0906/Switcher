@@ -17,12 +17,16 @@ extern "C" {
 #include "ISR_MemMap.h"
 #include "SC_MemMap.h"
 #include "PWM_MemMap.h"
+#include "ADC_MemMap.h"
+#include "DMA_MemMap.h"
     
 extern dtGPIO_Ports * const Ports;
 extern dtT1 *const T1;
 extern dtISR *const ISR;
 extern dtSC *const SC;
 extern dtPWM *const PWM;
+extern dtADC1 *const ADC1;
+extern dtDMA *const DMA;
 
 #ifdef	__cplusplus
 }
