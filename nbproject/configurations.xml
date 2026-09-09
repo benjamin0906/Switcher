@@ -17,6 +17,7 @@
       <itemPath>PWM.h</itemPath>
       <itemPath>ADC_MemMap.h</itemPath>
       <itemPath>DMA_MemMap.h</itemPath>
+      <itemPath>ADC.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -37,6 +38,7 @@
       <itemPath>ISR.c</itemPath>
       <itemPath>SC.c</itemPath>
       <itemPath>PWM.c</itemPath>
+      <itemPath>ADC.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -50,7 +52,7 @@
         <targetDevice>dsPIC33EV256GM102</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>Simulator</platformTool>
+        <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>2.10</languageToolchainVersion>
         <platform>3</platform>

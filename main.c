@@ -39,6 +39,7 @@ int main(void)
     volatile uint8_t j;
     dtGpioConfig test_pin1 = {.Gpio_Id = GPIO_PB8, .Gpio_Pull = PullCfg_None, .Mode = GpioMode_Output};
     dtGpioConfig test_pin2 = {.Gpio_Id = GPIO_PB9, .Gpio_Pull = PullCfg_None, .Mode = GpioMode_Output};
+    dtGpioConfig test_pin3 = {.Gpio_Id = GPIO_PA0, .Gpio_Pull = PullCfg_None, .Mode = GpioMode_Analog};
     dtT1_Cfg T1_Cfg = {.ExtClk = 0, .On = 1, .StopInIdle = 1, .Presc = T1_Presc_8, .Handler = Timer1_Handler, .Period = 8749};
     dtClockConfig ClockCfg = {.ClockSrc = ClockSrc_FRC_DivN_PLL, .DOZEN = 0, .FRCDIV = 0, .PLLPOST = 0, .PLLPRE = 0, .PLLDIV = 74};
     dtGen GenCfg = {.MasterDuty = 1, .PWMxH_EN = 1, .PWMxH_POL = 0, .PWMxL_EN = 0, .PWMxL_POL = 0, .Trigger = 0, .Duty = 1000, .Phase = 0};
@@ -55,6 +56,8 @@ int main(void)
     ISR_EnableGlobal();
     
     PWM_Config(&PWM_Cfg);
+    
+    ADC_Init();
     
     while(1)
     {

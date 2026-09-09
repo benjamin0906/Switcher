@@ -12,6 +12,7 @@
 extern "C" {
 #endif
 
+#include <stdint.h>
 #include "GPIO_MemMap.h"
 #include "Timer1_MemMap.h"
 #include "ISR_MemMap.h"
